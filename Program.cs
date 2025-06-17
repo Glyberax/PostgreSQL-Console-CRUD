@@ -36,13 +36,12 @@ namespace PostgreSQLConsoleApp
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Connection String - Kendi PostgreSQL bilgilerinizi girin
             optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=TestDB;Username=postgres;Password=4512");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Index oluşturma
+            // Index Maile index oluşturuyoruz aramak için
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
@@ -214,11 +213,11 @@ namespace PostgreSQLConsoleApp
                 Console.WriteLine("0. Çıkış");
                 Console.Write("\nSeçiminiz: ");
 
-                var choice = Console.ReadLine();
+                var secim = Console.ReadLine();
 
                 try
                 {
-                    switch (choice)
+                    switch (secim)
                     {
                         case "1":
                             await AddUserInteractive(userService);
