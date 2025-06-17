@@ -1,5 +1,4 @@
-﻿// Program.cs
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace PostgreSQLConsoleApp
 {
-    // Model - Kullanıcı tablosu
     [Table("Users")]
     public class User
     {
