@@ -39,7 +39,7 @@ namespace PostgreSQLConsoleApp
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Index Maile index oluşturuyoruz aramak için
+            // index oluşturuyoruz aramak için
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
@@ -146,8 +146,6 @@ namespace PostgreSQLConsoleApp
             return true;
         }
     }
-
-    // Ana Program
     class Program
     {
         static async Task Main(string[] args)
@@ -211,11 +209,11 @@ namespace PostgreSQLConsoleApp
                 Console.WriteLine("0. Çıkış");
                 Console.Write("\nSeçiminiz: ");
 
-                var secim = Console.ReadLine();
+                var Secim = Console.ReadLine();
 
                 try
                 {
-                    switch (secim)
+                    switch (Secim)
                     {
                         case "1":
                             await AddUserInteractive(userService);
